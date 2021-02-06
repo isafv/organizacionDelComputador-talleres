@@ -1126,4 +1126,115 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="east"/>
     </comp>
   </circuit>
+  <circuit name="ejercicio_overflow_i">
+    <a name="circuit" val="ejercicio_overflow_i"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(810,50)" to="(810,60)"/>
+    <wire from="(390,230)" to="(700,230)"/>
+    <wire from="(490,70)" to="(490,220)"/>
+    <wire from="(380,240)" to="(550,240)"/>
+    <wire from="(880,70)" to="(920,70)"/>
+    <wire from="(190,190)" to="(190,210)"/>
+    <wire from="(550,70)" to="(550,240)"/>
+    <wire from="(190,220)" to="(350,220)"/>
+    <wire from="(150,20)" to="(170,20)"/>
+    <wire from="(810,50)" to="(840,50)"/>
+    <wire from="(490,70)" to="(500,70)"/>
+    <wire from="(760,20)" to="(760,70)"/>
+    <wire from="(760,80)" to="(840,80)"/>
+    <wire from="(550,70)" to="(560,70)"/>
+    <wire from="(760,70)" to="(760,80)"/>
+    <wire from="(430,320)" to="(810,320)"/>
+    <wire from="(420,70)" to="(420,200)"/>
+    <wire from="(810,60)" to="(810,320)"/>
+    <wire from="(360,270)" to="(860,270)"/>
+    <wire from="(360,250)" to="(360,270)"/>
+    <wire from="(200,20)" to="(760,20)"/>
+    <wire from="(380,220)" to="(490,220)"/>
+    <wire from="(380,200)" to="(420,200)"/>
+    <wire from="(700,210)" to="(700,230)"/>
+    <wire from="(390,230)" to="(390,330)"/>
+    <wire from="(190,210)" to="(350,210)"/>
+    <wire from="(390,330)" to="(410,330)"/>
+    <wire from="(170,190)" to="(190,190)"/>
+    <wire from="(170,270)" to="(190,270)"/>
+    <wire from="(810,60)" to="(840,60)"/>
+    <wire from="(190,220)" to="(190,270)"/>
+    <wire from="(420,70)" to="(430,70)"/>
+    <wire from="(380,230)" to="(390,230)"/>
+    <wire from="(860,90)" to="(860,270)"/>
+    <wire from="(360,270)" to="(360,330)"/>
+    <wire from="(760,70)" to="(840,70)"/>
+    <wire from="(700,230)" to="(710,230)"/>
+    <comp lib="0" loc="(360,330)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="OP"/>
+    </comp>
+    <comp lib="6" loc="(319,431)" name="Text">
+      <a name="text" val="Este ejemplo aplica a todo los modos con  palabras de entrada A y B de 3 bit, usando el 4 como indicador de V"/>
+    </comp>
+    <comp lib="5" loc="(700,210)" name="Hex Digit Display"/>
+    <comp lib="0" loc="(560,70)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="N"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,70)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Z"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp loc="(380,200)" name="ALU"/>
+    <comp lib="0" loc="(150,20)" name="Constant"/>
+    <comp lib="0" loc="(170,190)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(710,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="S"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(410,330)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="6" loc="(224,412)" name="Text">
+      <a name="text" val="Es necasario un bit mas en la pabra de saluida (resultado) para detectarlo. "/>
+    </comp>
+    <comp lib="0" loc="(500,70)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="C"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(920,70)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="V"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(258,393)" name="Text">
+      <a name="text" val="Este ejercicio muestra como detactar el overflow usando la ALU con palabras unsugned."/>
+    </comp>
+    <comp lib="2" loc="(880,70)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="1" loc="(200,20)" name="NOT Gate"/>
+    <comp lib="0" loc="(170,270)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+  </circuit>
 </project>
