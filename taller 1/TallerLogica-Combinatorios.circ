@@ -344,9 +344,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(160,140)" to="(160,170)"/>
     <wire from="(420,310)" to="(510,310)"/>
     <wire from="(510,320)" to="(600,320)"/>
-    <wire from="(610,330)" to="(610,370)"/>
     <wire from="(90,470)" to="(120,470)"/>
     <wire from="(440,140)" to="(470,140)"/>
+    <wire from="(540,410)" to="(560,410)"/>
     <wire from="(340,300)" to="(370,300)"/>
     <wire from="(300,330)" to="(320,330)"/>
     <wire from="(180,180)" to="(180,220)"/>
@@ -375,6 +375,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(440,270)" to="(680,270)"/>
     <wire from="(210,380)" to="(210,400)"/>
     <wire from="(390,240)" to="(680,240)"/>
+    <wire from="(610,330)" to="(610,410)"/>
     <wire from="(160,350)" to="(160,380)"/>
     <wire from="(170,400)" to="(170,430)"/>
     <wire from="(160,170)" to="(190,170)"/>
@@ -382,6 +383,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(350,390)" to="(440,390)"/>
     <wire from="(110,140)" to="(140,140)"/>
     <wire from="(90,220)" to="(120,220)"/>
+    <wire from="(590,410)" to="(610,410)"/>
     <wire from="(340,290)" to="(370,290)"/>
     <wire from="(340,330)" to="(370,330)"/>
     <wire from="(340,310)" to="(370,310)"/>
@@ -420,9 +422,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="6" loc="(89,531)" name="Text"/>
-    <comp lib="6" loc="(680,408)" name="Text">
-      <a name="text" val="&quot;0&quot; implica el cableado directo del sumador, &quot;1&quot; la logica bit a bit"/>
-    </comp>
     <comp lib="0" loc="(120,470)" name="Splitter">
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
@@ -436,9 +435,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp loc="(390,240)" name="comparador_cero"/>
     <comp loc="(280,280)" name="AND_bit_a_bit_4"/>
-    <comp lib="0" loc="(610,370)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
+    <comp lib="6" loc="(683,462)" name="Text">
+      <a name="text" val="&quot;0&quot; implica el cableado directo del sumador, &quot;1&quot; la logica bit a bit"/>
     </comp>
     <comp lib="0" loc="(440,220)" name="Splitter">
       <a name="fanout" val="4"/>
@@ -462,13 +460,18 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="C"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="6" loc="(689,480)" name="Text">
+      <a name="text" val="con &quot;0&quot; verifica todos los resultados cuando se imlementa en la ALU"/>
+    </comp>
     <comp lib="0" loc="(70,220)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
       <a name="label" val="B"/>
     </comp>
     <comp lib="1" loc="(210,370)" name="NOT Gate"/>
+    <comp lib="0" loc="(540,410)" name="Constant"/>
     <comp lib="1" loc="(210,350)" name="NOT Gate"/>
+    <comp lib="1" loc="(590,410)" name="NOT Gate"/>
     <comp lib="6" loc="(89,566)" name="Text"/>
     <comp lib="0" loc="(470,140)" name="Pin">
       <a name="facing" val="west"/>
@@ -673,9 +676,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(470,520)" to="(820,520)"/>
     <wire from="(320,520)" to="(320,680)"/>
     <wire from="(680,170)" to="(700,170)"/>
-    <wire from="(330,100)" to="(680,100)"/>
     <wire from="(120,270)" to="(210,270)"/>
     <wire from="(730,100)" to="(750,100)"/>
+    <wire from="(330,100)" to="(680,100)"/>
     <wire from="(290,20)" to="(310,20)"/>
     <wire from="(740,190)" to="(900,190)"/>
     <wire from="(180,230)" to="(200,230)"/>
