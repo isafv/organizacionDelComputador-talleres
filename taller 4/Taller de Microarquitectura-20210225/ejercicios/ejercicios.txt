@@ -1,0 +1,46 @@
+Indicar cual es la secuencia de señales (o microoperaciones) que debe realizar la
+unidad de control para ejecutar las siguientes instrucciones:
+
+- MOV R5, R1
+
+  Tienen conexion directa con el bus interno, entonces:
+
+  R5 := R1
+
+- AND R7, R1
+
+  La opracion and depende de la ALU, entonces en necesario cargar estos dos valores en las entradas
+  de la misma para poder operar y reflejar el resultado en R_OUT. Entonces:
+
+  //asigno entradas
+  ALU_IN1:= R7
+  ALU_IN2:= R1
+  //designo la operacion a realizar - AND
+  ALU_and = 1
+  // flags
+  Z := ALU_Z
+  N := ALU_N
+  C := ALU_C
+  V := ALU_V
+  //salida
+  ALU_OUT := ALU_IN1 AND ALU_IN2
+
+- JE 0xFF
+
+  Es un salto condicional, entonces todas las intrucciones necesarias para modificar  finalmente el PC
+  estan anidadas a la comprobacion principal, en este caso, Z=1. Luego al corriente valor de PC se le
+  debe sumar (ALU_add) lo indicado en los 8 bit menos significativos del registro que contiene la isntruccion.
+  Entonces:
+
+  if Z=1
+    // aplico ext de signo al deplazamiento a realizar
+    EXT_IN = IR0[7:0]
+    // activo el componente para tomar su salida
+    SIGN_EXT_on = 1
+    // cargo los registros en la ALU
+    ALU_IN1:= PC
+    ALU_IN2:= EXT_OUT
+    // indico microoperacion
+    ALU_add = 1
+    // ajusto PC
+    PC := ALU_OUT
