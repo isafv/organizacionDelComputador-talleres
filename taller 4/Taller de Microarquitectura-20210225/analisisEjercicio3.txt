@@ -1,0 +1,23 @@
+JMP seguir = JMP 0x02
+1010 0000 0000 0010
+  A    0    0    2
+
+SET R0, 0xFF
+1111 1000 1111 1111
+  F    8    F    F
+
+SET R1, 0x11
+1111 1001 0001 0001
+  F    9    1    1
+
+ADD R0, R1
+0000 1000 0010 0000
+  0    8    2    0
+
+JC siguiente = JC 0x06
+1010 1000 0000 0110
+  A    8    0    6
+
+JMP halt = JMP 0x0A ; loop infinito
+1010 0000 0000 1010
+  A    0    0    A
