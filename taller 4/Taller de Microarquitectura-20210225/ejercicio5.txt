@@ -1,0 +1,12 @@
+           |00| JMP inicioSuma
+inicioSuma |02| SET R0 , 0x05
+           |04| SET R1 , 0x00
+           |06| SET R2 , 0x01
+           |08| SET R3 , 0x00
+     bucle |0a| ADD R1 , R0
+           |0c| SUB R0 , R2
+           |0e| CMP R0 , R3
+           |10| JZ fin
+           |12| JMP bucle
+       fin |14| SET R3 , 0xFF
+           |16| JMP fin
