@@ -1,0 +1,10 @@
+      |00| SET R0 , 0x04
+      |02| SET R1 , 0X00
+      |04| SET R2 , 0x01
+      |06| SET R3 , 0X01
+ciclo |08| CMP R0 , R2
+      |0a| JN fin
+      |0c| ADD R1 , R2
+      |0e| ADD R2 , R3
+      |10| JMP ciclo
+  fin |12| JMP fin
